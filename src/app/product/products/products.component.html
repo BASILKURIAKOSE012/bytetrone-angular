@@ -1,0 +1,38 @@
+<!-- <p>products works!</p> 
+<div *ngFor="let items of products">
+    {{items.title}}{{items.price}}
+
+</div>  -->
+
+<div  id="a1" class="col-12">
+  <!-- [ngClass]="show?'c1':''" -->
+<div   id="a2" *ngFor="let items of products;let i=index" class="card" style="width: 10rem;">
+    <img  id="a3" [src]=items.image class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 id="a4" class="card-title">{{i+1}} {{items.title| uppercase}}</h5>
+      <p id="a5" class="card-text">{{items.price|appPipes| currency :'INR'}}</p>
+      <a id="a6"  class="btn btn-primary" (click)="selectProduct(items.id)">Show Details</a>
+      <br>
+      <br>
+      <!-- <a id="a6"  class="btn btn-primary" (click)="showEdit(items.id)" >Edit Details</a> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- <app-productdetail [selectedProduct_Id]="selectedProductId"> -->
+  <!-- <p [selectedProduct_Id]="selectedProductId" >Product details</p> -->
+<!-- </app-productdetail> -->
+<app-productdetail (childClicked1)="Onchild2Clicked($event)"  ></app-productdetail>
+<div id="f3">
+  <app-editproduct id="f1" *ngIf="show" [item]="show" ></app-editproduct>
+
+</div>
+
+<!-- <app-editproduct #child1></app-editproduct> -->
+<!-- <app-editproduct [item]="show"></app-editproduct> -->
+
+<!-- <app-addproduct #edit *ngIf="item"></app-addproduct> -->
+<!-- <app-addproduct  *ngIf="item"></app-addproduct> -->
+<!-- <app-productdetail ></app-productdetail> -->
+<!-- (childClicked)="OnchildClicked($event)" -->

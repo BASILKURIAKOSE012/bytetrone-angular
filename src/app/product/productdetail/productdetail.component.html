@@ -1,0 +1,13 @@
+<!-- <p>Product detail</p> -->
+<div >
+    <!-- *ngIf="hide" -->
+
+<p id="z4" *ngIf="product">PRODUCT DETAILS</p>
+<div id="a1" *ngIf="product">
+    
+ <span id="z3">   {{product.id}}   {{product.title}}  {{product.description}} </span>
+    <img id="z1" [src]="product.image" alt="">
+    <button id="z2" (click)="onEdit()" class="btn btn-primary">Edit</button>
+</div>
+</div>
+<!-- <button (click)="onClick()" class="btb btn-primary">Edit</button> -->

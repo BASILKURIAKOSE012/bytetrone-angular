@@ -1,0 +1,52 @@
+<!-- <p>addproduct works!</p> -->
+<h3>Add Product</h3>
+<form [formGroup]="productForm" id="f1">
+    <div id="d1">
+<div>
+    <label for="">Title</label>
+    <input type="text" formControlName="title" class="form-control" [ngClass]="{'error':isInvalid('title')}"/>
+    <div *ngIf="productForm.get('title').dirty && productForm.get('title').invalid">
+        <div *ngIf="productForm.get('title').errors['required']">
+            Please enter title
+        </div>
+        <div *ngIf="productForm.get('title').errors['minlength']">
+            Please enter atleast 3 characters
+        </div>
+        <div *ngIf="productForm.get('title').errors['maxlength']">
+            Please enter max. 5 characters
+        </div>
+    </div>
+</div>
+<!-- <div *ngIf="this.productForm.get('title')?.touched&&this.productForm.get('title')?.errors">
+invalid title
+</div> -->
+<div>
+    <label for="">Category</label>
+    <select name="" id="" type="text" formControlName="category" class="form-control">
+<option [value]="option" *ngFor="let option of categories">{{option}}</option>
+    </select>
+    
+</div>
+<div>
+    <label for="">Price</label>
+    <input type="text" formControlName="price" class="form-control" [ngClass]="{'error':isInvalid('price')}">
+    <div *ngIf="productForm.get('price').errors?.['priceEvenValidator']">
+        Price should be even
+    </div>
+    <div *ngIf="productForm.errors?.['priceCategoryValidator']">
+        Price should be greater than 50000 for Laptop
+    </div>
+</div>
+<!-- <div *ngIf="this.productForm.get('price')?.touched&&this.productForm.get('price')?.errors">
+    invalid price
+    </div> -->
+<div>
+    <label for="">Description</label>
+    <input type="text" formControlName="description" class="form-control">
+    <!-- <input type="file" [(ngModel)]="product.image" class="form-control"> -->
+    <!-- <input type="file" formControlName="image" class="form-control"> -->
+</div>
+<br>
+<button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
+</div>
+</form>

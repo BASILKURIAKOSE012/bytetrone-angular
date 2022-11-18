@@ -1,0 +1,37 @@
+#f1{
+    margin-left: 30px;
+    margin-top: 2px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: 200px;
+}
+#d1{
+    padding: 3px;
+}
+label{
+    color:cornflowerblue
+}
+h3{
+    color:cornsilk;
+    margin-left: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+option{
+    color: cornflowerblue;
+}
+.error{
+    border: 2px solid red;
+}
+#p1{
+    margin-left: 15px;
+    color: blue;
+    padding: 5px;
+}
+#d5{
+    background-color: rgb(244, 245, 215);
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}

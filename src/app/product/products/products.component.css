@@ -1,0 +1,27 @@
+#a1{
+    display:inline-flex;
+    
+}
+#a2{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+#a3{
+    height: 150px;
+}
+#a4{
+    color: blue;
+}
+#a5{
+    color:cornflowerblue;
+}
+.c1{
+    opacity: 0;
+}
+#f1{
+    margin-left: 600px;
+}
+#f3{
+    margin-left: 850px;
+    margin-top: -600px;
+}
